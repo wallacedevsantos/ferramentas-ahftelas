@@ -46,6 +46,12 @@
           placeholder="Contato"
         />
         <input type="text" id="data" autocomplete="off" placeholder="Data" />
+        <input
+          type="text"
+          id="obs"
+          autocomplete="off"
+          placeholder="Observações"
+        />
       </form>
       <div id="botaoGerarTexto">
         <button type="button" onclick="gerarTexto()">
@@ -61,7 +67,8 @@
         *OBRA:* {NOMEDAOBRA} <br />
         *SERVIÇO:* {SISTEMA} <br />
         *CONTATO DA OBRA:* {CONTATO} <br />
-        *DATA:* {DATA}
+        *DATA:* {DATA} <br />
+        *OBS:* {OBS}
       </p>
       <div id="botoes">
         <button id="botaoInicio" type="button" onclick="recarregarPagina()">
