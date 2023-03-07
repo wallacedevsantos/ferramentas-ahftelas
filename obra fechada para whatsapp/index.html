@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/favicon-page.ico"
+      type="image/x-icon"
+    />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"
+    ></script>
+    <script defer src="script.js"></script>
+    <title>Gerador de texto de obras aprovadas</title>
+  </head>
+  <body>
+    <div id="formulario" class="formulario">
+      <h1>OBRAS APROVADAS PARA WHATSAPP</h1>
+      <form>
+        <input
+          type="text"
+          id="construtora"
+          autocomplete="off"
+          placeholder="Construtora"
+        />
+        <input
+          type="text"
+          id="nomeObra"
+          autocomplete="off"
+          placeholder="Nome da Obra"
+        />
+        <input
+          type="text"
+          id="sistema"
+          autocomplete="off"
+          placeholder="Sistema"
+        />
+        <input
+          type="text"
+          id="contato"
+          autocomplete="off"
+          placeholder="Contato"
+        />
+        <input type="text" id="data" autocomplete="off" placeholder="Data" />
+      </form>
+      <div id="botaoGerarTexto">
+        <button type="button" onclick="gerarTexto()">
+          Gerar texto para WhatsApp
+        </button>
+      </div>
+    </div>
+    <div id="carta-conteudo">
+      <h1>TEXTO GERADO COM SUCESSO!</h1>
+      <p id="TextoGerado">
+        ✅ PEDIDO APROVADO ✅ <br />
+        *CONSTRUTORA:* {CONSTRUTORA} <br />
+        *OBRA:* {NOMEDAOBRA} <br />
+        *SERVIÇO:* {SISTEMA} <br />
+        *CONTATO DA OBRA:* {CONTATO} <br />
+        *DATA:* {DATA}
+      </p>
+      <div id="botoes">
+        <button id="botaoInicio" type="button" onclick="recarregarPagina()">
+          Voltar ao Início
+        </button>
+        <button id="BtnCopy" type="button" onclick="CopiarTexto()">
+          Copiar
+        </button>
+      </div>
+    </div>
+    <footer id="rodape">
+      <p>
+        © 2023 Desenvolvido por Wallace Oliveira Santos. Todos os direitos
+        reservados.
+      </p>
+    </footer>
+  </body>
+</html>

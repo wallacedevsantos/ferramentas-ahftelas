@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/favicon-page.ico"
+      type="image/x-icon"
+    />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"
+    ></script>
+    <script defer src="script.js"></script>
+    <title>Gerador de Carta Fiel Depositário</title>
+  </head>
+  <body>
+    <div id="formulario" class="formulario">
+      <h1>GERADOR DE CARTA FIEL DEPOSITÁRIO</h1>
+      <form>
+        <input
+          type="text"
+          id="razaoSocialObra"
+          autocomplete="off"
+          placeholder="Razão Social da Obra"
+        />
+
+        <input
+          type="text"
+          id="cnpjObra"
+          autocomplete="off"
+          placeholder="CNPJ da Obra"
+        />
+
+        <input
+          type="text"
+          id="enderecoCobranca"
+          autocomplete="off"
+          placeholder="Endereço de Faturamento"
+        />
+
+        <input
+          type="text"
+          id="contrato"
+          autocomplete="off"
+          placeholder="Contrato"
+        />
+
+        <input
+          type="text"
+          id="nomeObra"
+          autocomplete="off"
+          placeholder="Nome da Obra"
+        />
+
+        <input
+          type="text"
+          id="enderecoObra"
+          autocomplete="off"
+          placeholder="Endereço da Obra"
+        />
+
+        <input type="text" id="nf" autocomplete="off" placeholder="NF" />
+
+        <input
+          type="text"
+          id="nfData"
+          autocomplete="off"
+          placeholder="Data da NF"
+        />
+
+        <input
+          type="text"
+          id="fornecedor"
+          autocomplete="off"
+          placeholder="Fornecedor"
+        />
+
+        <input
+          type="text"
+          id="valorNf"
+          autocomplete="off"
+          placeholder="Valor da NF"
+        />
+        <input
+          type="text"
+          id="material"
+          autocomplete="off"
+          placeholder="Material"
+        />
+      </form>
+      <div id="botaoGerarCarta">
+        <button type="button" onclick="gerarCarta()">
+          Gerar Carta Fiel Depositário
+        </button>
+      </div>
+    </div>
+    <div id="carta-conteudo">
+      <h1>
+        INSTRUMENTO PARTICULAR DE DEPÓSITO <br />
+        (COMPROMISSO DE FIEL DEPOSITÁRIO)
+      </h1>
+      <p>
+        Por este instrumento particular de Compromisso de Fiel Depositário, em
+        que são partes de um lado
+      </p>
+      <p>
+        AHF NOVA TECNICA COME E INST DE TELAS DE PROTEÇÃO LTDA pessoa jurídica
+        de direito privado inscrita no CNPJ/ME sob o nº. 15.864.088/0001-67 com
+        endereço na Travessa Nova Cantú 06 CEP: 02876-110– São Paulo - SP
+        doravante denominada DEPOSITÁRIA e, de outro lado
+        <span>{RAZÃOSOCIALOBRA1}</span>
+        pessoa jurídica de direito privado inscrita no CNPJ/me sob o nº.
+        <span>{CNPJDAOBRA} </span>com endereço na
+        <span>{ENDEREÇODECOBRANÇA}</span>, doravante denominado DEPOSITANTE,
+        têm, entre si, como justo e contratado o que se segue:
+      </p>
+      <p>
+        CONSIDERANDO QUE, em 06/10/2022 as Partes firmaram o Contrato de
+        Prestação de Serviços com Fornecimento de Material registrado sob o
+        nº<span>{CONTRATO}</span>(CONTRATO) cujo o objeto é Prestação de
+        serviços especializado para execução de Instalação de slqa e rede piso a
+        piso, para a obra do Empreendimento
+        <span>{NOMEDAOBRA}</span>(EMPREENDIMENTO), localizado na
+        <span>{ENDEREÇODAOBRA}</span>(ENDEREÇO);
+      </p>
+      <p>
+        CONSIDERANDO QUE, a responsabilidade pela guarda e entrega do material
+        relativo ao CONTRATO, seja ele fornecido diretamente pela DEPOSITÁRIA,
+        seja ele adquirido perante terceiros mediante faturamento direto, é
+        inteiramente da DEPOSITÁRIA;
+      </p>
+      <p>
+        RESOLVEM as partes celebrar o presente Instrumento Particular mediante
+        as seguintes cláusulas e condições que mutuamente outorgam e aceitam a
+        saber:
+      </p>
+      <p>
+        CLÁUSULA PRIMEIRA: A DEPOSITÁRIA declara para todos os efeitos legais e
+        sob as penas da lei, que recebeu da DEPOSITANTE, para guardar e
+        custodiar <span>{MATERIAL}</span>, Nota Fiscal <span>{NF}</span>,
+        emitida <span>{DATANF}</span>, do fornecedor <span>{FORNECEDOR}</span>,
+        ao preço de mercado de R$ <span>{VALOR}</span>(BEM DEPOSITADO).
+      </p>
+      <p>
+        CLÁUSULA SEGUNDA: A mercadoria, objeto deste COMPROMISSO DE FIEL
+        DEPOSITÁRIO, se encontra depositada na AHF travessa nova Cantú 06, Jd
+        paraná SP. CEP: 02876-110
+      </p>
+      <p>
+        CLÁUSULA TERCEIRA: O presente instrumento constitui prova suficiente de
+        que a DEPOSITANTE adquiriu e deixou, nesta data, sob a guarda e cuidados
+        da DEPOSITÁRIA, os bens descritos e qualificados na CLÁUSULA PRIMEIRA.
+      </p>
+      <p>
+        CLÁUSULA QUARTA: O BEM DEPOSITADO, descrito na cláusula 1, será entregue
+        à DEPOSITANTE, ou a quem ele indicar, tão logo seja solicitado, no local
+        em que ele indicar.
+      </p>
+      <p>
+        Parágrafo único: Caso haja recusa da DEPOSITÁRIA na entrega do BEM
+        DEPOSITADO, esta deverá pagar ao DEPOSITANTE a quantia em dinheiro
+        correspondente ao valor do BEM DEPOSITADO, sem prejuízo do ressarcimento
+        das perdas e danos que sobrevirem à recusa.
+      </p>
+      <p>
+        CLÁUSULA QUINTA: O DEPOSITÁRIO declara que o compromisso de depósito
+        será gratuito, isentando a DEPOSITANTE de quaisquer despesas.
+      </p>
+      <p>
+        CLÁUSULA SEXTA: As partes elegem o Foro da Comarca da Capital do Estado
+        de São Paulo, para dirimir eventuais controvérsias oriundas deste
+        COMPROMISSO DE FIEL DEPOSITÁRIO.
+      </p>
+      <p>
+        CLÁUSULA SÉTIMA: Firmam o presente COMPROMISSO DE FIEL DEPOSITÁRIO, para
+        os fins de direito, em 2 (duas) vias de igual teor, perante as
+        testemunhas abaixo identificadas.
+      </p>
+      <p id="data">São Paulo, {DATADEHOJE}.</p>
+      <div class="assinaturas">
+        <div id="assinaturaObra">
+          <p style="text-transform: uppercase">
+            ____________________________________________ <br />
+            {RAZÃOSOCIALOBRA}
+          </p>
+        </div>
+        <div id="assinaturaAhf">
+          <p>
+            ____________________________________________ <br />
+            AHF NOVA TÉCNICA COM E INST DE TELAS DE PROTEÇÃO LTDA
+          </p>
+        </div>
+        <div id="testemunhas">
+          <p>Testemunhas:</p>
+          <p id="testemunha1">
+            1. __________________________ <br />
+            Nome: Jusaine Oliveira Ribeiro <br />
+            RG: 33.650.276-X <br />
+            CPF/MF: 315.088.078-50
+          </p>
+          <p id="testemunha2">
+            2. __________________________ <br />
+            Nome: Patricia Figueiredo Vaz <br />
+            RG: 30.768.949-9 <br />
+            CPF/MF: 301.237.358-66
+          </p>
+        </div>
+        <div id="botoes">
+          <button id="botaoImprimir" type="button" onclick="imprimirPDF()">
+            Imprimir PDF
+          </button>
+          <button id="botaoInicio" type="button" onclick="recarregarPagina()">
+            Voltar ao Início
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer id="rodape">
+      <p>
+        © 2023 Desenvolvido por Wallace Oliveira Santos. Todos os direitos
+        reservados.
+      </p>
+    </footer>
+  </body>
+</html>

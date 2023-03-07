@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #070707;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+main {
+  width: 400px;
+  height: 100%;
+  max-height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content .imagem {
+  display: flex;
+  width: 200px;
+  max-width: 100%;
+}
+
+.content img {
+  max-width: 100%;
+  cursor: pointer;
+  transition: 0.5s all;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+.content p {
+  width: 80%;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0 1.5rem;
+  margin-top: 1rem;
+}
+
+.links {
+  margin-top: 1rem;
+  width: 80%;
+}
+
+.links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.links ul li {
+  border-radius: 10px;
+  background-color: rgb(235, 235, 235);
+  transition: 0.5s all;
+}
+
+.links ul li a {
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #070707;
+  transition: 0.5s all;
+  text-transform: uppercase;
+}
+
+.links ul li a:hover {
+  color: #fff;
+}
+
+.links ul li:hover {
+  background-color: rgb(70, 73, 255);
+}
+
+footer {
+  padding: 1rem;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  position: fixed;
+  bottom: 1rem;
+}
